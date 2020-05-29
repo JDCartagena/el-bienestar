@@ -119,7 +119,7 @@
               <a href="#">Nombre del Producto</a>
             </h4>
             <h4>Bs. <span id="precio1">3000</span></h4>
-            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="calcular(1)">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="datos(1)">
               Plan de Pagos
             </button>
           </div>
@@ -134,7 +134,7 @@
               <a href="#">Nombre del Producto</a>
             </h4>
             <h4>Bs. <span id="precio2">2000</span></h4>
-            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="calcular(2)">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="datos(2)">
               Plan de Pagos
             </button>
           </div>
@@ -149,7 +149,7 @@
               <a href="#">Nombre del Producto</a>
             </h4>
             <h4>Bs. <span id="precio3">1500</span></h4>
-            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="calcular(3)">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="datos(3)">
               Plan de Pagos
             </button>
           </div>
@@ -163,61 +163,70 @@
             <h4 class="card-title">
               <a href="#">Nombre del Producto</a>
             </h4>
-            <h4>Bs. <span id="precio4">1500</span></h4>
-            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="calcular(4)">
+            <h4>Bs. <span id="precio4">2500</span></h4>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="datos(4)">
               Plan de Pagos
             </button>
           </div>
         </div>
       </div>
+      
       <div class="col-md-3 col-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top producto" src="img/img-3.jpg" alt=""></a>
+          <a href="#"><img class="card-img-top producto" id="img1" src="img/img-1.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">Nombre del Producto</a>
             </h4>
-            <h4>Bs. 1234</h4>
-            <button class="btn btn-primary btn-block">Accion</button>
+            <h4>Bs. <span id="precio1">3000</span></h4>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="datos(1)">
+              Plan de Pagos
+            </button>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 col-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top producto" src="img/img-2.jpg" alt=""></a>
+          <a href="#"><img class="card-img-top producto" id="img2" src="img/img-2.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">Nombre del Producto</a>
             </h4>
-            <h4>Bs. 1234</h4>
-            <button class="btn btn-primary btn-block">Accion</button>
+            <h4>Bs. <span id="precio2">2000</span></h4>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"  onclick="datos(2)">
+              Plan de Pagos
+            </button>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 col-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top producto" src="img/img-4.jpg" alt=""></a>
+          <a href="#"><img class="card-img-top producto" id="img3" src="img/img-3.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">Nombre del Producto</a>
             </h4>
-            <h4>Bs. 1234</h4>
-            <button class="btn btn-primary btn-block">Accion</button>
+            <h4>Bs. <span id="precio3">1500</span></h4>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="datos(3)">
+              Plan de Pagos
+            </button>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 col-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top producto" src="img/img-1.jpg" alt=""></a>
+          <a href="#"><img class="card-img-top producto" id="img4" src="img/img-4.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">Nombre del Producto</a>
             </h4>
-            <h4>Bs. 1234</h4>
-            <button class="btn btn-primary btn-block">Accion</button>
+            <h4>Bs. <span id="precio4">2500</span></h4>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" onclick="datos(4)">
+              Plan de Pagos
+            </button>
           </div>
         </div>
       </div>
@@ -236,12 +245,12 @@
   </div>
   <!-- /.container -->
 
-    <!-- Modal -->
+  <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Plan de Pagos a 3 meses</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Plan de Pagos</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -254,40 +263,32 @@
               <img class="img-fluid producto" id="imagen" src="" width="200" alt="">
             </div>
             <div class="col-md-8">
-              <h5>Cuota inicial Bs. <span id="inicial"></span></h5>
-              <h5>Saldo Bs. <span id="saldo"></span></h5>
-              <h5>Interes 3% Bs. <span id="interes"></span></h5>
-
-              <div class="table">
-                <table class="table table-sm">
-                  <thead>
-                    <th>Fecha de Pago</th>
-                    <th>Amortizacion</th>
-                    <th>Interes</th>
-                    <th>Cuotas</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><span id="fecha1"></span></td>
-                      <td><span id="amortizacion1"></span></td>
-                      <td><span id="interes1"></span></td>
-                      <td><span id="cuota1"></span></td>
-                    </tr>
-                    <tr>
-                      <td><span id="fecha2"></span></td>
-                      <td><span id="amortizacion2"></span></td>
-                      <td><span id="interes2"></span></td>
-                      <td><span id="cuota2"></span></td>
-                    </tr>
-                    <tr>
-                      <td><span id="fecha3"></span></td>
-                      <td><span id="amortizacion3"></span></td>
-                      <td><span id="interes3"></span></td>
-                      <td><span id="cuota3"></span></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="row">
+                <div class="col-md-4">
+                  Tipo de Cliente
+                  <select name="cliente" id="cliente" class="form-control">
+                    <option value="">Seleccione...</option>
+                    <option value="nuevo">Cliente Nuevo</option>
+                    <option value="antiguo">Cliente Antiguo</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  Plazo
+                  <select name="meses" id="meses" class="form-control">
+                    <option value="3">3 Meses</option>
+                    <option value="4">4 Meses</option>
+                    <option value="5">5 Meses</option>
+                    <option value="6">6 Meses</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  &nbsp;
+                  <button class="btn btn-primary btn-block" onclick="calcular();">Calcular</button>
+                </div>
               </div>
+
+              <div class="table"></div>
+
             </div>
           </div>
         </div>
@@ -297,7 +298,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- Footer -->
   <footer class="mt-4 py-3 bg-dark">
